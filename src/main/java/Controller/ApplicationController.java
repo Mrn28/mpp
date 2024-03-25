@@ -138,6 +138,7 @@ public class ApplicationController {
             }
         }
 
+
         // Dacă zborul actualizat există în tabel
         if (index != -1) {
             // Eliminați zborul din tabel
