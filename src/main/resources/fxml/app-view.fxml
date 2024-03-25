@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="692.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ApplicationController">
+    <children>
+        <Label layoutX="292.0" layoutY="14.0" text="Search and Buy">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+        <TextField fx:id="destinationField" layoutX="108.0" layoutY="55.0" prefHeight="26.0" prefWidth="137.0" promptText="Destination" />
+        <DatePicker fx:id="datePicker" layoutX="288.0" layoutY="56.0" prefHeight="26.0" prefWidth="150.0" promptText="Date" />
+        <TableView fx:id="flightsTable" layoutX="56.0" layoutY="116.0" prefHeight="184.0" prefWidth="561.0">
+            <columns>
+                <TableColumn fx:id="searchedDestinationColumn" prefWidth="173.6000633239746" text="Destination" />
+                <TableColumn fx:id="searchedTimeColumn" prefWidth="168.79994201660156" text="Time" />
+                <TableColumn fx:id="searchAvailableSeatsColumn" prefWidth="218.4000244140625" text="Available Seats" />
+            </columns>
+        </TableView>
+        <TableView fx:id="allFlightsTable" layoutX="56.0" layoutY="350.0" prefHeight="191.0" prefWidth="562.0">
+            <columns>
+                <TableColumn fx:id="destinationColumn" prefWidth="207.199951171875" text="Destination" />
+                <TableColumn fx:id="dateColumn" prefWidth="68.800048828125" text="Date" />
+            <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="airportColumn" prefWidth="80.79998779296875" text="Airport" />
+            <TableColumn fx:id="availableSeatsColumn" prefWidth="128.80002441406248" text="AvailableSeats" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchButton" layoutX="478.0" layoutY="56.0" mnemonicParsing="false" onAction="#searchAndDisplayFlightsDetails" prefHeight="26.0" prefWidth="76.0" text="Search">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+<!--        <Button fx:id="reserveButton" layoutX="317.0" layoutY="316.0" mnemonicParsing="false" onAction="#reserveButtonClicked" prefHeight="17.0" prefWidth="66.0" text="Reserve" />-->
+<!--        <Button fx:id="logoutButton" layoutX="531.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout" />-->
+        <Label fx:id="messageLabel" layoutX="177.0" layoutY="91.0" prefHeight="17.0" prefWidth="246.0" />
+      <HBox alignment="TOP_CENTER" layoutX="56.0" layoutY="551.0" prefHeight="38.0" prefWidth="562.0">
+         <children>
+            <TextField fx:id="nameField" promptText="Name">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="touristsField" promptText="Tourists Name">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="addressField" promptText="Address">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="logoutBtn" layoutX="526.0" layoutY="645.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="buyButton" layoutX="304.0" layoutY="645.0" mnemonicParsing="false" onAction="#buyTicket" prefHeight="26.0" prefWidth="65.0" text="Buy">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <HBox alignment="TOP_CENTER" layoutX="56.0" layoutY="600.0" prefHeight="46.0" prefWidth="562.0">
+         <children>
+            <TextField fx:id="destinationBuyField" promptText="Destination">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <DatePicker fx:id="dateBuyField" promptText="Date">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </DatePicker>
+            <TextField fx:id="timeBuyField" prefHeight="26.0" prefWidth="145.0" promptText="Time">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
